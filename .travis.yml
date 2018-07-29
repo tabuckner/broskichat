@@ -14,6 +14,7 @@ cache:
     - node_modules
 script:
   - cd ./broskichat-app
+  - yarn install
   - CI=true yarn test
   # - npm test
   # - npm run build
