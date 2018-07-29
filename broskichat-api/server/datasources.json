@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "development-jm2b2.mongodb.net/test?retryWrites=true",
+    "port": 27017,
+    "url": "mongodb+srv://developer:developmentpw@development-jm2b2.mongodb.net/test?retryWrites=true",
+    "database": "development",
+    "password": "developmentpw",
+    "name": "db",
+    "user": "developer",
+    "connector": "mongodb"
+  }
+}
