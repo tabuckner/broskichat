@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* Old CSS from default React */
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -20,6 +21,17 @@
 
 .App-intro {
   font-size: large;
+}
+
+/* Start Custom CSS */
+
+/* Temp, css for testing. preBulma */
+.header {
+  background-color: #333;
+}
+
+.innerHeader {
+  color: #fff;
 }
 
 @keyframes App-logo-spin {
