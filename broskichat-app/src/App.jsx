@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-// Imports of ./Components
-import Header from './Components/Partials/Header';
-import Footer from './Components/Partials/Footer'
-
 class App extends Component {
   render() {
 
     return (      
       
       <div>
-        <Header />
 
         <div className="container App">
           <p>
@@ -21,7 +16,6 @@ class App extends Component {
 
         </div>
 
-        <Footer />
       </div>
     );
   }
