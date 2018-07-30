@@ -39,10 +39,4 @@ class Header extends React.Component {
     }
 }
 
-const header = <Header />;
-ReactDOM.render(
-  header,
-  document.getElementById('root')
-);
-
 export default Header;
