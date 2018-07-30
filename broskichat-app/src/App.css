@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -25,4 +25,13 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+/* Custom CSS */
+.App {
+  margin: 300px;
+}
+
+.footerBG {
+  background-color: #333;
 }
