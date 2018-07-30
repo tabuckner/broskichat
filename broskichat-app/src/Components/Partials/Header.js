@@ -3,27 +3,38 @@ import ReactDOM from 'react-dom';
 
 // import logo from '../../logo.svg';
 
-const title = "preBulma";
-const menuItems = ["menuItem1", "menuItem2", "menuItem3", "menuItem4", "menuItem5"];
+const title = "Broski Chat";
+const menuItems = [ "Chat", "About", "Contact" ];
 
 const eachMenuItem = menuItems.map((item, index) => {
-    return <li key={index}> {item} </li>;
+    return <a className="navbar-item has-text-light" key={index}> {item} </a>;
 })
 
 class Header extends React.Component {
     
     render() {
         return (
-            <header className="header">
-                <div className="innerHeader">
-                    <div>{title}</div>
-                    <div>
-                        <ul>
-                            {eachMenuItem}
-                        </ul>
+            <nav className="navbar navbar-menu is-dark">
+                <div className="navbar-brand">
+                    <a className="navbar-item is-size-5">
+                        {title}
+                    </a>
+                </div>
+                <div className="navbar-menu">
+                    <div className="navbar-start">
+                        {eachMenuItem}
+                    </div>
+                    <div className="navbar-end">
+                        {/* If annonymous */}
+                        <a className="navbar-item has-text-light is-right"> Login </a>
+                        <a className="navbar-item has-text-light is-right"> Register </a>
+
+                        {/* If logged in */}
+                        {/* <a className="navbar-item has-text-light is-right"> Account </a>
+                        <a className="navbar-item has-text-light is-right"> Logout </a> */}
                     </div>
                 </div>
-            </header> 
+            </nav>
         );
     }
 }
@@ -35,11 +46,3 @@ ReactDOM.render(
 );
 
 export default Header;
-
-// Notes
-
-// ***Kept this for className reference*** //
-// <header className="App-header">
-//     <img src={logo} className="App-logo" alt="logo" />
-//     <h1 className="App-title">Hello from header</h1>
-// </header> 
