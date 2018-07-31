@@ -1,7 +1,6 @@
 ### Prerequisites
 
 * [ ] Did you check the FAQs on Discuss?
-* [ ] Are you reporting to the correct repository?
 * [ ] Did you perform a cursory search?
 
 ### Description
