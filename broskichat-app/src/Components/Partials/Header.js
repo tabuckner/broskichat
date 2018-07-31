@@ -9,6 +9,7 @@ class Header extends React.Component {
     
     render() {
         const logoTitle = "Broski Test"
+        // Change array to update menu items. map() each element.
         const menuItems = [ "Chat", "About", "Contact" ].map((item, index) => {
             // Return each element w/ key
             return <a className="navbar-item has-text-light" key={index}> {item} </a>;
