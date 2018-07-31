@@ -8,8 +8,8 @@ import Header from './Components/Partials/Header';
 class App extends Component {
   render() {
 
-    return (      
-      
+    return (
+
       <div>
         <Header />
 
