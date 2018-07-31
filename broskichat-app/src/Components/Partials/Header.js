@@ -1,30 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-// import logo from '../../logo.svg';
-
-const title = "Broski Chat";
-const menuItems = [ "Chat", "About", "Contact" ];
-
-const eachMenuItem = menuItems.map((item, index) => {
-    return <a className="navbar-item has-text-light" key={index}> {item} </a>;
-})
+// import logo from '../../logo.svg'; // Use logo later
 
 class Header extends React.Component {
+    // constructor(props) { // Kept for when passing in props
+    //     super(props);
+    // }
     
     render() {
+        const logoTitle = "Broski Test"
+        const menuItems = [ "Chat", "About", "Contact" ].map((item, index) => {
+            // Return each element w/ key
+            return <a className="navbar-item has-text-light" key={index}> {item} </a>;
+        });
+
         return (
             <nav className="navbar navbar-menu is-dark">
                 <div className="navbar-brand">
                     <a className="navbar-item is-size-5">
-                        {title}
+
+                        { logoTitle }
+
                     </a>
                 </div>
                 <div className="navbar-menu">
                     <div className="navbar-start">
-                        {eachMenuItem}
+                        
+                        { menuItems }
+
                     </div>
                     <div className="navbar-end">
+
                         {/* If annonymous */}
                         <a className="navbar-item has-text-light is-right"> Login </a>
                         <a className="navbar-item has-text-light is-right"> Register </a>
@@ -32,6 +38,7 @@ class Header extends React.Component {
                         {/* If logged in */}
                         {/* <a className="navbar-item has-text-light is-right"> Account </a>
                         <a className="navbar-item has-text-light is-right"> Logout </a> */}
+                        
                     </div>
                 </div>
             </nav>
