@@ -14,10 +14,7 @@ class App extends Component {
         <Header />
 
         <div className="container App">
-          <p>
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-
+          {/* Main Container Area */}
         </div>
 
       </div>
