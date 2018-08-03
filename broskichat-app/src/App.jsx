@@ -4,6 +4,7 @@ import './App.css';
 
 // Imports of ./Components
 import Header from './Components/Partials/Header';
+import Home from './Components/Home/Home';
 
 class App extends Component {
   render() {
@@ -13,8 +14,8 @@ class App extends Component {
       <div>
         <Header />
 
-        <div className="container App">
-          {/* Main Container Area */}
+        <div className="App">
+          <Home />
         </div>
 
       </div>
