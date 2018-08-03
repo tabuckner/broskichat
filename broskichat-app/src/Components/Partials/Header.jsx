@@ -10,7 +10,7 @@ class Header extends React.Component {
       // When hamburger is clicked
       this.isOpen = false;
       this.onClickHamburger = () => {
-        // Grab elements `menu`, `burger`
+        // Grab elements ref `menu`, `burger`
         const menu = this.refs.navMenu,
               burger = this.refs.hamburger;
 
@@ -47,7 +47,7 @@ class Header extends React.Component {
         if(item.children) {
           return  <div className="navbar-item has-dropdown is-hoverable" key={index}> 
                     {/* `has-text-light` can be removed when Bulmaswatch */}
-                    <a className="navbar-link has-text-light">
+                    <a className="navbar-link has-text-light" href={item.path}>
                       {item.name}
                     </a>
                     {/* `navbar` and `is-dark` can be removed when Bulmswatch */}
