@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.footer{
+  padding:0px;
+}
+.prefooter{
+  padding: 2rem 1.5rem;
+}
+
+.copyright{
+  padding: 1rem 1.5rem;
+
+}
