@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from './Components/Partials/Header';
+import Footer from './Components/Partials/Footer';
 
 import TestRenderer from 'react-test-renderer';
 
