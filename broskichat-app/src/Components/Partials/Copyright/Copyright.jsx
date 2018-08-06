@@ -6,7 +6,7 @@ class Copyright extends React.Component {
     return (
       <div className="copyright has-background-black">
         <p className="copyright_text has-text-centered has-text-light">
-            Copyright
+          Copyright
         </p>
       </div>
     );
