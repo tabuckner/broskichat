@@ -38,5 +38,9 @@
   "test-model": {
     "dataSource": "db",
     "public": true
+  },
+  "chatUser": {
+    "dataSource": "db",
+    "public": true
   }
 }
