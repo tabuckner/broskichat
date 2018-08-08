@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Point = (props) => {
-  console.log(props);
   const defaults = {
     img: 'https://bulma.io/images/placeholders/1280x960.png',
     title: 'Title Goes Here',
