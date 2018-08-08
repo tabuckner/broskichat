@@ -20,5 +20,14 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "jest-enzyme": "^6.0.2",
     "react-test-renderer": "^16.4.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/",
+      "!**/src/index.js",
+      "!**/src/registerServiceWorker.js",
+      "!**/src/setupTests.js"
+    ]
   }
 }
