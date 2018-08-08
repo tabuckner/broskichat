@@ -9,5 +9,7 @@ describe('<Header />', () => {
     // instance root
     const root = header.root;
 
-    // Expect <a className="navbar-item is-size-5"> to equal 'Broski Test'
+    // Expect <a className="navbar-item is-size-5"> to equal 'BroskiChat'
     expect(root.findByProps({className: "navbar-item is-size-5"}).children).toEqual([ 'BroskiChat' ]);
+  });
+});
