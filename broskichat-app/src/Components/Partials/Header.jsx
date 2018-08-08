@@ -3,7 +3,7 @@ import React from 'react';
 // import logo from '../../logo.svg'; // Use logo later
 
 class Header extends React.Component {
-  constructor(props) { // Kept for when passing in props
+  constructor(props) {
       super(props);
 
       /* Functions */
@@ -47,6 +47,7 @@ class Header extends React.Component {
         if(item.children) {
           return  <div className="navbar-item has-dropdown is-hoverable" key={index}> 
                     {/* `has-text-light` can be removed when Bulmaswatch */}
+                    {/* Keep in mind `hrefs` will be replaced with a router */}
                     <a className="navbar-link has-text-light" href={item.path}>
                       {item.name}
                     </a>
