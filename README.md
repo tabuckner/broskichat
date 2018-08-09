@@ -122,6 +122,13 @@ NONE YET
 <...>
 ```
 
+## Design Tenets
+
+* Must be responsive for all screen sizes
+* Must match theme
+* Pretty
+* Make use of bulma classes
+
 ## Deployment
 
 No deployment process yet.
