@@ -1,26 +1,28 @@
 language: node_js
 node_js:
-  - "lts/*"
+- lts/*
 sudo: required
 before_install:
-  # Repo for Yarn
-  - sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -y -qq yarn
+- sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
+- echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+- sudo apt-get update -qq
+- sudo apt-get install -y -qq yarn
 install:
-  - yarn global add codecov
+- yarn global add codecov
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 script:
-  - cd ./broskichat-app
-  - yarn install
-  - CI=true yarn test
-  - cd ../broskichat-api
-  - yarn install
-  - yarn posttest
+- cd ./broskichat-app
+- yarn install
+- CI=true yarn test
+- cd ../broskichat-api
+- yarn install
+- yarn posttest
 after_success:
-  - cd ../broskichat-app
-  - CI=true yarn coverage && codecov
+- cd ../broskichat-app
+- CI=true yarn coverage && codecov
+notifications:
+  slack:
+    secure: Ceb05Azpcj4+H4hg3Y8wV8E9sqAan4rKpZMy3IkBDEZPTCPSXs9Tf7NayRD+pBYH5lwMDFyLA27w/xegVhDv2ZaXr819ZaJ2RymtHSjjTa68GMKJODxwr7zNUzdMJm6Tts4ms7iMq1NN4J/yCc79r5ZbcTVP+/sbNijcm/16W219a5HcKwGZYlGFpIH9unzPJJvdlMXyYJe0iAun8sSu+rXU3NvoHIRUAB0gFw0mtEDB2UZDfbFluH3ERFJ54tmEgXBZnvC0OExJ8+CYJS51Tb8aM418yDOh7Th0VazGT/QIs/TEVjqQryvAi0ROfpatB1S7i1EkwIoj629wDB+SlMhJ0I+RbxxsfBru4FUybapyfuqzs49pu/Ae1boGR5jwHzEEmHGq8vQEEzHpMEwDZBcU1v/2ffRALD4dDYN6PUtqR/IpMnCV1+1LBn/DvT9aLMu8YTqv47fO8nrx9u1mIxks+h0Cg61K6srlzdZYRSjPVQQA+Au7undvlATSjCTYyC+gKTQuoX0bIdawuJxKlMoKl8Y0ia6MU0YdF/WxOhDha6R29DQ2ikQ0rE4bLSH1u4AFm/PeddYeGOnltgJ3f9SYvf6yQvhBYuqmXCR6Fv4OuGZFre/Y40kRBHvPsIQ3IlRpzspLeYMPLdqUPOI18AqBpFZvU+bIAoodQJPR1Iw=
