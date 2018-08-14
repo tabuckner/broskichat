@@ -13,7 +13,7 @@ class App extends Component {
         <Header />
         <div className="App">
           <Home />
-          <About />
+//          <About />
         </div>
         <Footer />
       </React.Fragment>
