@@ -12,6 +12,11 @@ coverage:
     patch: yes
     changes: no
 
+ignore:
+  "src/registerServiceWorker.js" # Ignore the Default Service Worker
+  "src/setupTests.js" # Ignore the testSetup config file
+  "src/index.js" # Ignore the index file for webpack
+
 parsers:
   gcov:
     branch_detection:

@@ -1,4 +1,8 @@
 # BroskiChat
+[![Build Status](https://travis-ci.com/tabuckner/broskichat.svg?branch=develop)](https://travis-ci.com/tabuckner/broskichat)
+[![codecov](https://codecov.io/gh/tabuckner/broskichat/branch/develop/graph/badge.svg)](https://codecov.io/gh/tabuckner/broskichat)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 Collaborative project for the BroskiTownUSA group. Both API and APP directories are housed in a single repo for now. There are some project dependencies outlined below. If you have any questions or concerns feel free to reach out. Check out the [API](broskichat-api/README.md) and [APP](broskichat-app/README.md) README files.
 
