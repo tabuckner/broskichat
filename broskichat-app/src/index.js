@@ -4,6 +4,8 @@ import 'bulma/css/bulma.css' // CSS Framework
 import './index.css'; // Main App Styles
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import About from './Components/About/About'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<About />, document.getElementById('root'));
 registerServiceWorker();
