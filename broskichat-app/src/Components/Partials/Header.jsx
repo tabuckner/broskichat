@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // import logo from '../../logo.svg'; // Use logo later
 
@@ -40,7 +41,7 @@ class Header extends React.Component {
             name1:"Placeholder1", path1: "",
             name2:"Placeholder2", path2: ""
           } }, 
-        { name:"About", path: "" }, 
+        { name:"About", path: "/about" }, 
         { name:"Contact", path: "" } ].map((item, index) => {
         
         // If item have children
@@ -76,7 +77,7 @@ class Header extends React.Component {
     return (
       <nav className="navbar is-black">
         <div className="navbar-brand">
-          <a className="navbar-item is-size-5">
+          <a className="navbar-item is-size-5" href="/">
 
             { this.title }
 
