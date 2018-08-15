@@ -15,9 +15,9 @@ class App extends Component {
         <Header />
         <div className="App">
           <Home />
-
-          <Register />
           
+          {/* Move Later when router is implemented */}
+          <Register />
         </div>
         <Footer />
       </React.Fragment>
