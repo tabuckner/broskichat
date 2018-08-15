@@ -8,12 +8,12 @@ import Footer from './Components/Partials/Footer';
 
 class App extends Component {
   render() {
-
     return (
       <React.Fragment>
         <Header />
         <div className="App">
           <Home />
+          {/*<About />*/}
         </div>
         <Footer />
       </React.Fragment>
