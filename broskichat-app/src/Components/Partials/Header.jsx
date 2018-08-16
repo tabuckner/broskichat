@@ -7,29 +7,8 @@ class Header extends React.Component {
   constructor(props) {
       super(props);
 
-      /* Functions */
-      // When hamburger is clicked
+      // Toggle when hamburger is clicked
       this.isOpen = false;
-      this.onClickHamburger = () => {
-        // Grab elements ref `menu`, `burger`
-        const menu = this.refs.navMenu,
-              burger = this.refs.hamburger;
-
-        if(!this.isOpen) {
-          // Add active class
-          menu.classList.add('is-active');
-          burger.classList.add('is-active');
-
-        } else {
-          // Remove active class
-          menu.classList.remove('is-active');
-          burger.classList.remove('is-active');
-
-        }
-        // Set isOpen to opposite
-        this.isOpen = !this.isOpen;
-        
-      }
       
       /* Header Items */
       this.title = "BroskiChat";
@@ -47,12 +26,10 @@ class Header extends React.Component {
         // If item have children
         if(item.children) {
           return  <div className="navbar-item has-dropdown is-hoverable" key={index}> 
-                    {/* `has-text-light` can be removed when Bulmaswatch */}
                     {/* Keep in mind `hrefs` will be replaced with a router */}
                     <a className="navbar-link has-text-light" href={item.path}>
                       {item.name}
                     </a>
-                    {/* `navbar` and `is-dark` can be removed when Bulmswatch */}
                     <div className="navbar navbar-dropdown has-text-light is-dark">
                       <a className="navbar-item has-text-light" href={item.children.path1}>
                         {item.children.name1}
@@ -72,6 +49,28 @@ class Header extends React.Component {
         }
       });  
   }
+
+  // When hamburger is clicked function
+  onClickHamburger = () => {
+    // Grab elements ref `menu`, `burger`
+    const menu = this.refs.navMenu,
+          burger = this.refs.hamburger;
+
+    if(!this.isOpen) {
+      // Add active class
+      menu.classList.add('is-active');
+      burger.classList.add('is-active');
+
+    } else {
+      // Remove active class
+      menu.classList.remove('is-active');
+      burger.classList.remove('is-active');
+
+    }
+    // Set isOpen to opposite
+    this.isOpen = !this.isOpen;
+    
+  }
   
   render() {
     return (
@@ -89,7 +88,6 @@ class Header extends React.Component {
             <span aria-hidden="true"></span>
           </div>
         </div>
-        {/* `navbar` and `is-dark` can be removed when Bulmswatch */}
         <div className="navbar navbar-menu is-dark" ref="navMenu">
           <div className="navbar-start">
             
@@ -99,8 +97,8 @@ class Header extends React.Component {
           <div className="navbar-end">
 
             {/* If annonymous */}
-            <a className="navbar-item has-text-light is-right"> Login </a>
-            <a className="navbar-item has-text-light is-right"> Register </a>
+            <a className="navbar-item has-text-light is-right">Login</a>
+            <a className="navbar-item has-text-light is-right" href="/register">Register</a>
 
             {/* If logged in */}
             {/* <a className="navbar-item has-text-light is-right"> Account </a>
