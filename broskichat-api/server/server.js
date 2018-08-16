@@ -27,12 +27,13 @@ boot(app, __dirname, function(err) {
   if (require.main === module) {
     // app.start();
 
+    // start socket.io
     app.io = require('socket.io')(app.start());
     app.io.on('connection', function(socket) {
       console.log('a user connected');
-      // socket.on('chat message', function(msg) {
-      //   console.log(`message: ${msg}`);
-      // });
+      socket.on('chat message', function(msg) {
+        console.log(`message: ${msg}`);
+      });
       socket.on('disconnect', function() {
         console.log('user disconnected');
       });
