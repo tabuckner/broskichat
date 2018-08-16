@@ -9,7 +9,6 @@ import Register from './Components/Users/Register/Register';
 
 class App extends Component {
   render() {
-
     return (
       <React.Fragment>
         <Header />
@@ -18,6 +17,9 @@ class App extends Component {
           
           {/* Move Later when router is implemented */}
           <Register />
+
+          {/*<About />*/}
+
         </div>
         <Footer />
       </React.Fragment>
