@@ -15,7 +15,7 @@ class Header extends React.Component {
 
       // Nav menu items
       this.menuItems = [
-        { name:"Chat", path: "", 
+        { name:"Chat", path: "/chat", 
           children: {
             name1:"Placeholder1", path1: "",
             name2:"Placeholder2", path2: ""
