@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
 import { MESSAGE_SENT, MESSAGE_RECEIVED } from '../../shared/Global/sockets/events';
-
+import Form from './Form/Form';
 
 class Chat extends Component {
   constructor() {
@@ -36,6 +36,10 @@ class Chat extends Component {
     this.setState({ messages: [...this.state.messages, data] });
   }
 
+  setMessage = ev => {
+    this.setState({ message: ev.target.value });
+  }
+
   render() {
     return (
       <div className="chat container is-fluid" style={{ minHeight: '75vh', padding: '2rem' }}>
@@ -58,19 +62,11 @@ class Chat extends Component {
           </div>
         </div>
 
-        {/* Abstract into Component */}
-        <form action="#">
-          <div className="field">
-            <label className="label">Message</label>
-            <p className="control">
-              <input
-                value={this.state.message}
-                onChange={ev => this.setState({ message: ev.target.value })}
-                className="input" type="text" name="message" placeholder="Enter Message" />
-            </p>
-          </div>
-          <button onClick={this.sendMessage} className="button is-info">Send</button>
-        </form>
+        <Form 
+          value={this.state.message}
+          onChange={this.setMessage}
+          onClick={this.sendMessage}
+        />
       </div>
     );
   }
