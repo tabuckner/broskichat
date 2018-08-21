@@ -9,7 +9,7 @@ const Point = (props) => {
   const { img, title, text } = props.point;
 
   return (
-    <div className="card has-background-light">
+    <div className="card has-background-grey-lighter">
       <div className="card-image">
         <figure className="image">
           <img src={img || defaults.img} alt={title || defaults.title} />
