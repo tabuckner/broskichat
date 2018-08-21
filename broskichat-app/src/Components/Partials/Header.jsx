@@ -97,7 +97,7 @@ class Header extends React.Component {
           <div className="navbar-end">
 
             {/* If annonymous */}
-            <a className="navbar-item has-text-light is-right">Login</a>
+            <a className="navbar-item has-text-light is-right" href="/login">Login</a>
             <a className="navbar-item has-text-light is-right" href="/register">Register</a>
 
             {/* If logged in */}
