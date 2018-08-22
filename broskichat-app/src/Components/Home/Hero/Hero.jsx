@@ -4,7 +4,7 @@ const Hero = (props) => {
   const {title, subtitle, tag} = props.content;
   
   return (
-    <section className="hero is-primary is-bold is-medium">
+    <section className="hero is-primary is-bold is-medium has-text-centered">
       <div className="hero-body">
         <div className="container">
           <h1 className="title">{title || 'Title'}</h1>
