@@ -9,6 +9,7 @@ import Footer from './Components/Partials/Footer';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Register from './Components/Users/Register/Register';
+import Chat from './Components/Chat/Chat';
 import NotFound from './Components/NotFound/NotFound';
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
               <Route exact path={"/"} component={Home} />
               <Route path={"/about"} component={About} />
               <Route path={"/register"} component={Register} />
+              <Route path={"/chat"} component={Chat} />
               <Route component={NotFound}/>
             </Switch>
           </div>
