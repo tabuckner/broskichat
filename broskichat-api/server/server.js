@@ -24,6 +24,29 @@ boot(app, __dirname, function(err) {
   if (err) throw err;
 
   // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
+  if (require.main === module) {
+    // app.start();
+
+    // start socket.io
+    app.io = require('socket.io')(app.start());
+    app.io.on('connection', function(socket) {
+      console.log('a user connected');
+
+      socket.on('message-sent', function(data) {
+        const msg = data.message;
+        console.log(`message: ${msg}`);
+
+        // Re-Emit the Message/{data}
+        const serverEcho = { // FAKES A RESPONSE FOR TESTING
+          userId: 2,
+          message: `Server Echoes: ${data.message}`,
+        };
+        app.io.emit('message-received', serverEcho);
+      });
+
+      socket.on('disconnect', function() {
+        console.log('user disconnected');
+      });
+    });
+  }
 });
