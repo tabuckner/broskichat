@@ -11,6 +11,7 @@ import About from './Components/About/About';
 import Register from './Components/Users/Register/Register';
 import Chat from './Components/Chat/Chat';
 import NotFound from './Components/NotFound/NotFound';
+import Contact from './Components/Contact/Contact';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
               <Route path={"/about"} component={About} />
               <Route path={"/register"} component={Register} />
               <Route path={"/chat"} component={Chat} />
+              <Route path={"/contact"} component={Contact} />
               <Route component={NotFound}/>
             </Switch>
           </div>
