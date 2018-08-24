@@ -65,8 +65,7 @@ class Chat extends Component {
         <Form 
           value={this.state.message}
           onChange={this.setMessage}
-          onClick={this.sendMessage}
-        />
+          onClick={this.sendMessage} />
       </div>
     );
   }

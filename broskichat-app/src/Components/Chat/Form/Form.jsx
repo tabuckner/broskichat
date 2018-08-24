@@ -8,7 +8,7 @@ class Form extends Component {
 					<label className="label">Message</label>
 					<p className="control">
 						<input
-							value={this.props.message}
+							value={this.props.value}
 							onChange={this.props.onChange}
 							className="input" type="text" name="message" placeholder="Enter Message" />
 					</p>
