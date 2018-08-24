@@ -2,6 +2,7 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var uuidv4 = require('uuid/v4');
 
 var app = module.exports = loopback();
 
@@ -39,6 +40,7 @@ boot(app, __dirname, function(err) {
         // Re-Emit the Message/{data}
         const serverEcho = { // FAKES A RESPONSE FOR TESTING
           userId: 2,
+          echoId: `${uuidv4()}`,
           message: `Server Echoes: ${data.message}`,
         };
         app.io.emit('message-received', serverEcho);
