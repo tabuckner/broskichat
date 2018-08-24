@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
+import uuidv4 from 'uuid/v4';
 import { MESSAGE_SENT, MESSAGE_RECEIVED } from '../../shared/Global/sockets/events';
 import Form from './Form/Form';
+import Message from './Message/Message';
 
 class Chat extends Component {
   constructor() {
     super();
-    this.state = { // Why is this in the constructor?
+    this.state = {
       userId: 1,
       message: '',
       messages: []
@@ -25,11 +27,12 @@ class Chat extends Component {
     ev.preventDefault();
     const newMessage = {
       userId: this.state.userId,
-      message: this.state.message
+      message: this.state.message,
+      keyId: uuidv4()
     }
     this.addMessage(newMessage);
     this.socket.emit(MESSAGE_SENT, newMessage);
-    this.setState({ message: '' });
+    this.setState({ message: '', echoId:'' });
   }
 
   addMessage = data => {
@@ -48,20 +51,13 @@ class Chat extends Component {
             <p>Chat Test</p>
           </div>
           <div className="message-body">
-            { // Abstract into a Message SFC using UUID for IDs
-              this.state.messages.map(message => {
-                const classes = message.userId === this.state.userId ? 'message is-info' : 'message is-success';
-                const styles = message.userId === this.state.userId ? {} : { borderWidth: '0 4px 0 0', textAlign: 'right' };
-                return (
-                  <div className={classes} key={`${message.userId}-${message.message.replace(/\s/g, '')}`}>
-                    <div className="message-body" style={styles}>{message.message}</div>
-                  </div>
-                )
-              })
-            }
+            <Message 
+              messages={this.state.messages}
+              message={this.state.message}
+              userId={this.state.userId}
+              echoId={this.state.echoId} />
           </div>
         </div>
-
         <Form 
           value={this.state.message}
           onChange={this.setMessage}
