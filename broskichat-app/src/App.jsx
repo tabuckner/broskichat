@@ -26,10 +26,12 @@ class App extends Component {
               <Route path={"/about"} component={About} />
               <Route path={"/register"} component={Register} />
               <Route path={"/login"} component={Login} />
-              <Route component={NotFound} />
               <Route path={"/chat"} component={Chat} />
+
               <Route path={"/contact"} component={Contact} />
-              <Route component={NotFound}/>
+
+              <Route component={NotFound} />
+
             </Switch>
           </div>
         </Router>
