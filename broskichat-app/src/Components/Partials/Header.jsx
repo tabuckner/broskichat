@@ -21,7 +21,7 @@ class Header extends React.Component {
             name2:"Placeholder2", path2: ""
           } }, 
         { name:"About", path: "/about" }, 
-        { name:"Contact", path: "" } ].map((item, index) => {
+        { name:"Contact", path: "/contact" } ].map((item, index) => {
         
         // If item have children
         if(item.children) {
