@@ -10,7 +10,7 @@ class Register extends React.Component {
       username: '',
       password: '',
       password2: '', // For user to verify password
-      gender: 'male'
+      gender: 'male' // Can change default
     };
 
     // Bind `this` to each method below
@@ -41,10 +41,10 @@ class Register extends React.Component {
       // { name: 'password2', value: this.state.password2, label: 'Verify Password', type: 'password', placeholder: 'Please match the password' } @NOTE - Add more objects like this
     ].map((item, index) => {
       // Return each element w/ key
-      return <label className='label' key={ index }>
+      return <label className='label has-text-weight-light' key={ index }>
                 { item.label }
                 <input
-                  className="input"
+                  className='input'
                   placeholder={ item.placeholder }
                   name={ item.name }
                   type={ item.type }
@@ -91,25 +91,45 @@ class Register extends React.Component {
     event.preventDefault();
   }
 
+  // Style the horizontal line (This may be moved to shared);
+  hrStyle() {
+    const style1 = {
+      'border': 0,
+      'height': '1px',
+      'backgroundImage': 'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 2555, 0.75), rgba(255, 255, 255, 0))'
+    };
+    return <hr style={style1} />;
+  }
+
   // Render the component
   render() {
     return(
-      <div className="container">
-        <div className="column">
-          <div className="field">
-            <h1 className="title"> Register Form </h1>
-            <hr/>
-            <form onSubmit={ this.handleSubmit }>
-              {/* Execute the methods to create form elements */}
-              { this.processInputForms() }
-              { this.processDropdownItems() }
+      <section className="register">
+        <div className="hero is-fullheight is-primary is-bold">
+          <div className="hero-body">
+            <div className="container">
+              <div className="columns is-centered">
+                <div className="column is-6">
+                  <div className="box is-light">
+                      <div className="field">
+                        <h1 className="title"> Register Form </h1>
+                        { this.hrStyle() }
+                        <form onSubmit={ this.handleSubmit }>
+                          {/* Execute the methods to create form elements */}
+                          { this.processInputForms() }
+                          { this.processDropdownItems() }
 
-              <hr />
-              <input className="button is-primary" type="submit" value="Submit" />
-            </form>
+                          { this.hrStyle() }
+                          <input className="button is-inverted is-dark is-fullwidth is-outlined" type="submit" value="Register" />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+      </section>
     );
   }
 }

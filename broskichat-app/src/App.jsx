@@ -8,11 +8,15 @@ import Header from './Components/Partials/Header';
 import Footer from './Components/Partials/Footer';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
-import Register from './Components/Users/Register/Register';
+import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import Chat from './Components/Chat/Chat';
 import NotFound from './Components/NotFound/NotFound';
 import Contact from './Components/Contact/Contact';
+// Font Awesome Library
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faShare, faToolbox, faSmile } from '@fortawesome/free-solid-svg-icons';
+library.add(faShare, faToolbox, faSmile);
 
 class App extends Component {
   render() {
